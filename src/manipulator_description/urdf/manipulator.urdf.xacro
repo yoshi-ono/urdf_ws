@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="modular_manipulator" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find manipulator_description)/urdf/manipulator_parts.xacro"/>
+  <xacro:include filename="$(find manipulator_description)/urdf/one_finger_gripper.xacro"/>
+
+  <material name="black">
+    <color rgba="0.2 0.2 0.2 1"/>
+  </material>
+  <material name="grey">
+    <color rgba="0.75 0.75 0.75 1"/>
+  </material>
+
+  <link name="world"/>
+
+  <xacro:property name="end_effector_base_link" value="wrist_base_link"/>
+
+  <xacro:manipulator parent="world" end_effector_link="${end_effector_base_link}"
+      link_colour_1="black" link_colour_2="grey">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:manipulator>
+
+  <xacro:one_finger_gripper base_link_name="${end_effector_base_link}"
+      base_colour="black" finger_colour="grey"/>
+
+</robot>
