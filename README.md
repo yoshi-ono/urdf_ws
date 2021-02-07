@@ -3,6 +3,22 @@
 **ロボットモデリング講習会：URDFの作成方法**<br>
 [マニピュレータ型ロボットのURDF作成](https://gbiggs.github.io/rosjp_urdf_tutorial_text/manipulator_urdf.html)
 
+## setup
+```
+$ git clone 
+$ cd ~/urdf_ws/src
+$ catkin_create_pkg --rosdistro noetic manipulator_description
+$ cd ~/urdf_fs
+$ catkin_make
+```
+
+## rviz起動
+```
+$ cd ~/urdf_ws
+$ source devel/setup.bash
+$ roslaunch urdf_tutorial display.launch model:=src/manipulator_description/urdf/manipulator.urdf.xacro gui:=true
+```
+
 ## noetic - ubunts 20.04
 この環境で作成
 
