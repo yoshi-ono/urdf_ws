@@ -12,7 +12,7 @@ $ sudo apt update
 $ sudo apt install ros-kinetic-joint-state-publisher-gui
 ```
 
-xacroファイルに日本語使用不可
+xacroファイルに日本語コメント``<!-- 日本語コメント -->``使用不可
 ```
 Traceback (most recent call last):
   File "/opt/ros/kinetic/share/xacro/xacro.py", line 61, in <module>
