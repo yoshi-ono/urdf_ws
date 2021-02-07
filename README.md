@@ -5,10 +5,10 @@
 
 ## setup
 ```
-$ git clone 
+$ git clone https://github.com/yoshi-ono/urdf_ws.git
 $ cd ~/urdf_ws/src
 $ catkin_create_pkg --rosdistro noetic manipulator_description
-$ cd ~/urdf_fs
+$ cd ~/urdf_ws
 $ catkin_make
 ```
 
