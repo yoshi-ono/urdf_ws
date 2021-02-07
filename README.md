@@ -3,6 +3,11 @@
 **ロボットモデリング講習会：URDFの作成方法**<br>
 [マニピュレータ型ロボットのURDF作成](https://gbiggs.github.io/rosjp_urdf_tutorial_text/manipulator_urdf.html)
 
+## noetic - ubunts 20.04
+この環境で作成
+
+## melodic - ubunts 18.04
+
 ## kinetic - ubunts 16.04
 packageが不足
 ```
