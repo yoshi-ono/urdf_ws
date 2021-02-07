@@ -3,7 +3,7 @@
 **ロボットモデリング講習会：URDFの作成方法**<br>
 [マニピュレータ型ロボットのURDF作成](https://gbiggs.github.io/rosjp_urdf_tutorial_text/manipulator_urdf.html)
 
-*kinetic - ubunts 16.04*<br>
+## kinetic - ubunts 16.04
 packageが不足
 ```
 [ERROR] [1612657018.908127]: Could not find the GUI, install the 'joint_state_publisher_gui' package
