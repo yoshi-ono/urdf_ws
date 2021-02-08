@@ -23,6 +23,7 @@ $ roslaunch urdf_tutorial display.launch model:=src/manipulator_description/urdf
 この環境で作成
 
 ## melodic - ubunts 18.04
+下記(kinetic)と同様
 
 ## kinetic - ubunts 16.04
 packageが不足
