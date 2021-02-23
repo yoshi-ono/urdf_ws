@@ -4,7 +4,9 @@
 [マニピュレータ型ロボットのURDF作成](https://gbiggs.github.io/rosjp_urdf_tutorial_text/manipulator_urdf.html)
 
 **ROS Wiki**<br>
-[urdf/XML (XMLの仕様)](http://wiki.ros.org/urdf/XML)
+[urdf/XML (XMLの仕様)](http://wiki.ros.org/urdf/XML)<br>
+[xacro](http://wiki.ros.org/xacro)<br>
+[roslaunch/XML](http://wiki.ros.org/roslaunch/XML)
 
 ## setup
 ```
