@@ -31,9 +31,11 @@ Usage: roslaunch [package] <filename> [arg_name:=value...]
 $ echo $ROS_PACKAGE_PATH
 ~/urdf_ws/src:/opt/ros/noetic/share
 ```
-ここでの[package]は、`/opt/ros/noetic/share/urdf_tutorial`<br>
-\<filename\>は、`launch`ディレクトリの中の`display.launch`
-```xml:display.launch
+ここでの[package]は、`/opt/ros/noetic/share/urdf_tutorial`ディレクトリ<br>
+
+\<filename\>は、更に`launch`ディレクトリの中の`display.launch`ファイル
+
+```xml
 <launch>
 
   <arg name="model" default="$(find urdf_tutorial)/urdf/01-myfirst.urdf"/>
