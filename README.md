@@ -22,6 +22,35 @@ $ source devel/setup.bash
 $ roslaunch urdf_tutorial display.launch model:=src/manipulator_description/urdf/manipulator.urdf.xacro gui:=true
 ```
 
+### 上記でどうやってrviz起動しているのか
+```
+Usage: roslaunch [package] <filename> [arg_name:=value...]
+```
+[package]はROS_PACKAGE_PATHにある
+```
+$ echo $ROS_PACKAGE_PATH
+~/urdf_ws/src:/opt/ros/noetic/share
+```
+ここでの[package]は、`/opt/ros/noetic/share/urdf_tutorial`<br>
+\<filename\>は、`launch`ディレクトリの中の`display.launch`
+```xml:display.launch
+<launch>
+
+  <arg name="model" default="$(find urdf_tutorial)/urdf/01-myfirst.urdf"/>
+  <arg name="gui" default="true" />
+  <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
+
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
+```
+
+
 ## noetic - ubunts 20.04
 この環境で作成
 
