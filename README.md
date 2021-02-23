@@ -28,14 +28,15 @@ $ roslaunch urdf_tutorial display.launch model:=src/manipulator_description/urdf
 ```
 Usage: roslaunch [package] <filename> [arg_name:=value...]
 ```
-[package]はROS_PACKAGE_PATHにある
+*package*は、ROS_PACKAGE_PATHにあるディレクトリを指定できる
 ```
 $ echo $ROS_PACKAGE_PATH
 ~/urdf_ws/src:/opt/ros/noetic/share
 ```
-ここでの[package]は、`/opt/ros/noetic/share/urdf_tutorial`ディレクトリ<br>
-
-\<filename\>は、更に`launch`ディレクトリの中の`display.launch`ファイル
+ここでの*package*は、`/opt/ros/noetic/share/urdf_tutorial`ディレクトリ<br>
+<br>
+*filename*は、*package*内の`launch`ディレクトリにあるファイルを指定できる<br>
+ここでの*filename*は、`display.launch`ファイル
 
 ```xml
 <launch>
@@ -54,14 +55,19 @@ $ echo $ROS_PACKAGE_PATH
 </launch>
 ```
 
+## Gazebo起動
+```
+$ roslaunch manipulator_description manipulator_simulation.launch
+```
 
-## noetic - ubunts 20.04
+## 動作環境
+### noetic - ubunts 20.04
 この環境で作成
 
-## melodic - ubunts 18.04
-下記(kinetic)と同様
+### melodic - ubunts 18.04
+下記(kinetic)と同様の問題
 
-## kinetic - ubunts 16.04
+### kinetic - ubunts 16.04
 packageが不足
 ```
 [ERROR] [1612657018.908127]: Could not find the GUI, install the 'joint_state_publisher_gui' package
