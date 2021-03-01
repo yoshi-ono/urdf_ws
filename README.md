@@ -19,8 +19,10 @@ $ catkin_make
 
 ## rviz起動
 ```
+(1)
 $ cd ~/urdf_ws
 $ source devel/setup.bash
+(2)
 $ roslaunch urdf_tutorial display.launch model:=src/manipulator_description/urdf/manipulator.urdf.xacro gui:=true
 ```
 
@@ -56,6 +58,7 @@ $ echo $ROS_PACKAGE_PATH
 ```
 
 ## Gazebo起動
+rviz起動の(1)を実行済みであること。
 ```
 $ roslaunch manipulator_description manipulator_simulation.launch
 ```
